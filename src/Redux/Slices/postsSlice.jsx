@@ -15,7 +15,7 @@ const postSlice = createSlice({
             userId: action.payload.userId,
             content: action.payload.content,
             image: action.payload.image || '',
-            createAt: new Date().toISOString(),
+            createdAt: new Date().toISOString(),
             likes: [],
             comments: [],
            };

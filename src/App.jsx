@@ -1,4 +1,5 @@
 
+import Modal from "./Components/Modal";
 import Navbar from "./Components/Navbar";
 import Post from "./Components/Post/Post";
 
@@ -22,6 +23,7 @@ function App() {
             className="px-3 py-1 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 "
             />
             <Post />
+            <Modal />
         </div>
         <div className="flex flex-col gap-4 border p-4 bg-white rounded-lg shadow">
           <div className="border p-4 rounded">.</div>

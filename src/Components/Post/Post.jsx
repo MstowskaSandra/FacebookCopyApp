@@ -1,16 +1,32 @@
-import React from 'react'
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import { formatDistanceToNow } from 'date-fns';
+import { openModal } from '../../Redux/Slices/modalSlice';
+import PostDetails from './Components/PostDetails/PostDetails';
 
 const Post = () => {
+    const dispatch = useDispatch();
     const posts = useSelector((state) => state.posts.posts);
     const users = useSelector((state) => state.users.users);
+
+
+    const handleOpenPostDetails = (post, author) => {
+        dispatch(openModal({
+            modalType: 'postDetails',
+            modalData: { post, author },
+        }));
+    };
+
   return (
     <div className="flex flex-col gap-6">
         {posts.map((post) => {
             const author = users.find((u) => u.id === post.userId);
             return (
-                <div key={post.id} className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm space-y-4 ">
+                <div 
+                 key={post.id} 
+                 className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm space-y-4 "
+                 onClick={() => handleOpenPostDetails(post, author)}
+                 >
                     <div className="flex items-center gap-2 mb-2">
                         <img src={author.avatar} alt={author.name} className="w-12 h-12 rounded-full" />
                         <div className="flex flex-col">
