@@ -17,7 +17,7 @@ const usersSlice = createSlice({
             name: action.payload.name,
             avatar: action.payload.image || '',
            };
-           state.Users.unshift(newUser);
+           state.users.unshift(newUser);
         },
     },
 });
