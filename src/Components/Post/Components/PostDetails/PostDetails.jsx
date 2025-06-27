@@ -41,9 +41,8 @@ const PostDetails = ({ post, author }) => {
           const commentAuthor = users.find((user) => user.id === comment.userId);
           return (
             <Comment key={comment.id} comment={comment} commentAuthor={commentAuthor} />
-          );
-        
-      })}
+          ); 
+        })}
       </div>
     </div>
   );

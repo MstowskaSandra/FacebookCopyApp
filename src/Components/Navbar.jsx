@@ -19,7 +19,7 @@ const Navbar = () => {
             Add post
         </button>
         <img 
-           src='/Assets/Faces/Face1.jpg'
+           src={`${process.env.PUBLIC_URL}/Assets/Faces/Face1.jpg`}
            alt='avatar'
            className='w-10 h-10 rounded-full object-cover'
            />
