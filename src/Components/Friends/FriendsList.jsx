@@ -7,7 +7,7 @@ const FriendsList = () => {
     const friends = useSelector(state => state.users.users);
 
   return (
-    <div className='flex flex-col gap-4 border p-4 bg-white rounded-lg shadow max-h-[90vh] overflow-hidden'>
+    <div className='flex flex-col gap-2 border p-2 bg-white rounded-lg shadow max-h-[90vh] overflow-hidden'>
         <div className='flex items-stretch justify-beetween gap-4'>
             <h2 className='text-lg font-bold text-gray-700 '>Your Friends</h2>
             <FriendsSearch />  

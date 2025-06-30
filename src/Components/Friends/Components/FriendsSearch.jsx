@@ -5,7 +5,6 @@ import UserCard from '../../UserCard';
 const FriendsSearch = () => {
     const [searchFriend, setSearchFriend] = useState('');
     const users = useSelector(state => state.users.users);
-
     const filtered = users.filter(user => user.name.toLowerCase().includes(searchFriend.toLocaleLowerCase()));
 
   return (

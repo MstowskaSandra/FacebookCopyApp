@@ -22,7 +22,7 @@ const Navbar = () => {
            src={`${process.env.PUBLIC_URL}/Assets/Faces/Face1.jpg`}
            alt='avatar'
            className='w-10 h-10 rounded-full object-cover'
-           />
+        />
       </div>
     </div>
   );

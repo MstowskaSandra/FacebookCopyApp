@@ -1,16 +1,17 @@
 
 import { useSelector } from "react-redux";
-import Modal from "./Components/Modal";
+import Modal from "./Components/Modal/Modal";
 import Navbar from "./Components/Navbar";
 import Post from "./Components/Post/Post";
 import UserCard from "./Components/UserCard";
 import FriendsList from "./Components/Friends/FriendsList";
+import Stories from "./Components/Stories";
 
 
 function App() {
     const mainUser = useSelector(state => state.users.users.find(u => u.id === 'user-1'));
+    const stories = useSelector(state => state.stories.stories);
     const users = useSelector(state => state.users.users);
-    const friends = users.filter(u => u.id !== 1);
 
   return (
     <>
@@ -28,7 +29,7 @@ function App() {
 
 
         <div className="md:col-span-2 flex flex-col gap-4 border p-4 bg-white rounded-lg shadow">
-          <div className="border p-4 rounded">zdjęcia/storki</div>
+          <Stories />
           <input 
             placeholder="What are you thinking about?"
             alt="Search"
