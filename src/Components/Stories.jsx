@@ -7,7 +7,7 @@ const Stories = () => {
     const users = useSelector(state => state.users.users);
   
     return (
-        <div className="flex gap-2 overflow-x-auto overflow-hidden py-2 px-1 scrollbar-hide">
+        <div className="flex gap-2 overflow-x-auto py-2 px-1 scrollbar-hide">
             {stories.map(storie => {
               const user = users.find(u => u.id === storie.userId);
               return (
