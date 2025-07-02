@@ -29,7 +29,10 @@ const CreatePostModal = () => {
 
   return (
     <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
-        <h2 className='text-xl font-semibold text-gray-800'>Create a new post</h2>
+        <div className="flex items-center gap-3 px-2 py-1">
+          <img src={`${process.env.PUBLIC_URL}/Assets/Faces/Face1.jpg`} alt="main user face" className='icon' />
+          <h2 className='text-xl font-semibold text-gray-800'>Create a new post</h2>
+        </div>
 
         <textarea
         value={content}

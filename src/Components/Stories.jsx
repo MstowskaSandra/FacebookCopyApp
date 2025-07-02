@@ -16,7 +16,7 @@ const Stories = () => {
                       src={storie.image} 
                       alt="storie"
                       className='w-full h-full object-cover' 
-                      />
+                    />
                     <div className="absolute top-0 left-0 p-1">
                       <UserCard user={user} className='flex items-stretch gap-1 text-wrap text-xs text-white hover:bg-gray-100 hover:text-black cursor-pointer'/>
                     </div>

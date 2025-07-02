@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .icon-container {
+        @apply flex items-center gap-4  hover:bg-gray-100 cursor-pointer;
+    }
+    
+    .icon {
+        @apply w-10 h-10 rounded-full object-cover;
+    }
+}

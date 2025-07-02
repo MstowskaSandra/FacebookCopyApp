@@ -6,7 +6,7 @@ const Comment = ({ comment, commentAuthor}) => {
           <img 
               src={commentAuthor?.avatar}
               alt={commentAuthor?.userName}
-              className='w-8 h-8 rounded-full object-cover'
+              className='icon'
           />
           <div className='gap-6'>
             <div className='text-sm font-semibold'>{commentAuthor?.userName}</div>
@@ -14,7 +14,7 @@ const Comment = ({ comment, commentAuthor}) => {
             <div className='text-sm text-gray-700'>{comment.content}</div>
           </div>
         </div>
-        );    
+  );    
 };
 
 export default Comment;
